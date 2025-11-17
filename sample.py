@@ -1,13 +1,7 @@
-import time
-
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver=webdriver.Edge()
 driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 time.sleep(5)
 driver.find_element(By.NAME,"username").send_keys("Admin")
 driver.find_element(By.CSS_SELECTOR,"input[placeholder='Password']").send_keys("admin123")
 time.sleep(10)
-driver.find_element(By.CSS_SELECTOR,"button[class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button']").click()
+driver.find_element(By.CSS_SELECTOR,"class='oxd-button oxd-button--medium oxd-button--main orangehrm-login-button'").click()
 time.sleep(5)
